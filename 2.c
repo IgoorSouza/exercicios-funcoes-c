@@ -1,9 +1,7 @@
 #include <stdio.h>
 
-int main()
-{
+int compare() {
     int x, y;
-
     printf("Digite dois numeros: \n");
     scanf("%d %d", &x, &y);
 
@@ -14,6 +12,10 @@ int main()
     } else {
         printf("Os dois numeros sao iguais\n");
     }
+}
+
+int main() {
+    compare();
 
     return 0;
 }

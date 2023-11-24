@@ -1,14 +1,9 @@
 #include <stdio.h>
 
-int main()
-{
-    int a, i, cont = 0;
+int acharDivisores(int a) {
+    int divisores[a], cont = 0;
 
-    printf("Digite um numero positivo: \n");
-    scanf("%d", &a);
-    int divisores[a];
-
-    for (i = 1; i <= a; i++) {
+    for (int i = 1; i <= a; i++) {
         if (a % i == 0) {
             divisores[cont] = i;
             cont++;
@@ -16,13 +11,25 @@ int main()
     }
 
     printf("Os divisores deste numero sao: ");
-    for (i = 0; i < cont; i++) {
+
+    for (int i = 0; i < cont; i++) {
         if (i == cont - 1) {
-            printf("%d\n", divisores[i]);
+            printf("%d.\n", divisores[i]);
+        } else if (i == cont - 2) {
+            printf("%d e ", divisores[i]);
         } else {
             printf("%d, ", divisores[i]);
         }
     }
+}
+
+int main() {
+    int a;
+
+    printf("Digite um numero positivo: \n");
+    scanf("%d", &a);
+
+    acharDivisores(a);
 
     return 0;
 }

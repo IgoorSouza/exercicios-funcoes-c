@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int cont() {
     int n, i;
 
     printf("Digite um numero: \n");
@@ -10,6 +9,10 @@ int main()
     for (i = 1; i <= n; i++) {
         printf("%d\n", i);
     }
+}
+
+int main() {
+    cont();
 
     return 0;
 }

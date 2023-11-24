@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-int main()
-{
-    int x, soma, i, maior = -9999999, menor = 9999999;
+int somar() {
+    double maior = -9999999, menor = 9999999, x;
 
     printf("Digite tres numeros: \n");
 
-    for (i = 0; i < 3; i++) {
-        scanf("%d", &x);
+    for (int i = 0; i < 3; i++) {
+        scanf("%lf", &x);
         if (x > maior) {
             maior = x;
         }
@@ -15,11 +14,12 @@ int main()
             menor = x;
         }
     }
+    double soma = maior + menor;
+    printf("A soma do maior e do menor numero resulta em %.2lf", soma);
+}
 
-    soma = menor + maior;
-
-    printf("A soma do maior e do menor numero e %d", soma);
+int main() {
+    int soma = somar();
 
     return 0;
 }
-
